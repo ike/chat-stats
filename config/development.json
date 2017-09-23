@@ -1,0 +1,36 @@
+{
+  "clientUri": "http://localhost:8080",
+  "auth": {
+    "secret": "changeMeInProduction!",
+    "seedPassword": "letmein!"
+  },
+  "db": {
+    "client": "postgresql",
+    "connection": {
+      "database": "chat-stats",
+      "user": "potus",
+      "password": "password",
+      "poolSize": 40
+    }
+  },
+  "hapi": {
+    "cache": {
+      "engine": "catbox-memory"
+    },
+    "connections": {
+      "routes": {
+        "security": true,
+        "cors": {
+          "additionalExposedHeaders": ["Link"],
+          "origin": ["http://localhost:8080"]
+        }
+      }
+    }
+  },
+  "connection": {
+    "public": {
+      "port": 3001,
+      "labels": "public"
+    }
+  }
+}

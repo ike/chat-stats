@@ -1,0 +1,19 @@
+{
+  "auth": {
+    "options": {
+      "algorithm": "HS256"
+    }
+  },
+  "saltRounds": 10,
+  "tokenLength": 48,
+  "rateLimit": {
+    "userLimit": false,
+    "pathLimit": false
+  },
+  "inviteValidateRateLimit": {
+    "pathLimit": 1,
+    "pathCache": {
+      "expiresIn": 10
+    }
+  }
+}
